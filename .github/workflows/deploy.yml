@@ -24,8 +24,9 @@ jobs:
     #- name: Archive build artifacts
     - name: List files
       run: dir
-
-      #run: tar -czvf DerekPersonalMVC.tar.gz -C DerekPersonalMVC\bin\Release\ .
+      
+    - name: Archive Build Artifacts
+      run: tar -czvf DerekPersonalMVC.tar.gz -C D:\a\PersonalSite\PersonalSite\DerekPersonalMVC\bin\Release\ .
 
     - name: Upload artifacts
       uses: actions/upload-artifact@v3
