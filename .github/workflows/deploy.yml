@@ -1,7 +1,4 @@
-# This workflow will build a .NET project
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
-
-name: .NET
+name: .NET Framework App
 
 on:
   push:
@@ -11,84 +8,68 @@ on:
 
 jobs:
   build:
-
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./
+    runs-on: windows-latest
     steps:
     - uses: actions/checkout@v3
-    
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v3
-      with:
-        dotnet-version: 8.0.x
-        
+
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v1
+
     - name: Restore dependencies
-      run: dotnet restore
-   
+      run: nuget restore DerekPersonalMVC.sln
+
     - name: Build
-      run: dotnet build -c Release --no-restore
-    
-    - name: Test
-      run: dotnet test -c Release --no-build --verbosity normal
-    
+      run: msbuild DerekPersonalMVC.sln /p:Configuration=Release
+
     - name: Archive build artifacts
-      run: cd /home/runner/work/S1SolApp/S1SolApp/CoreApp/bin/Release/ && tar -czvf S1SolApp.tar.gz net8.0
-    
+      run: tar -czvf YourApp.tar.gz -C path\to\Release\Directory\ .
+
     - name: Upload artifacts
       uses: actions/upload-artifact@v3
       with:
         name: package
-        path: /home/runner/work/S1SolApp/S1SolApp/CoreApp/bin/Release/S1SolApp.tar.gz
-        
+        path: YourApp.tar.gz
+
   deploy:
     name: Deploy
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: Download package
-        uses: actions/download-artifact@v3
-        with:
-          name: package
+    - name: Download package
+      uses: actions/download-artifact@v3
+      with:
+        name: package
 
-      - name: Display files in working directory
-        run: ls
+    - name: Install SSH Key
+      uses: shimataro/ssh-key-action@v2
+      with:
+        key: ${{secrets.KEY}}
+        known_hosts: unnecessary
 
-      - name: Install SSH Key
-        uses: shimataro/ssh-key-action@v2
-        with:
-          key: ${{secrets.KEY}}
-          known_hosts: unnecessary
-          
-      - name: Adding Known Hosts
-        run: ssh-keyscan -H 159.203.174.5  >> ~/.ssh/known_hosts
-         
-      - name: Transfer build artifacts to DO Droplet
-        uses: appleboy/scp-action@master
-        with:
-          host: 159.203.174.5
-          username: root
-          key: ${{secrets.KEY}}
-          source: S1SolApp.tar.gz
-          target: /var/www/temp/
-      
-      - name: Deploy application
-        uses: appleboy/ssh-action@master
-        with:
-          host: 159.203.174.5
-          username:  root
-          key: ${{secrets.KEY}}
-          script: |
-            sudo systemctl stop app.service
-            cd ..
-            cd /var/www/
-            rm -rf app
-            mkdir app
-            cd /var/www/temp/
-            tar -xvf S1SolApp.tar.gz -C /var/www/app
-            cd /var/www/app/
-            mv net8.0/* .
-            sudo systemctl restart app.service
-            cd /var/www/temp/
-            rm -rf S1SolApp.tar.gz
+    - name: Adding Known Hosts
+      run: ssh-keyscan -H 159.203.174.5 >> ~/.ssh/known_hosts
+
+    - name: Transfer build artifacts to DO Droplet
+      uses: appleboy/scp-action@master
+      with:
+        host: 159.203.174.5
+        username: root
+        key: ${{secrets.KEY}}
+        source: YourApp.tar.gz
+        target: /var/www/temp/
+
+    - name: Deploy application
+      uses: appleboy/ssh-action@master
+      with:
+        host: 159.203.174.5
+        username: root
+        key: ${{secrets.KEY}}
+        script: |
+          sudo systemctl stop yourapp.service
+          cd /var/www/
+          mkdir -p yourapp
+          cd /var/www/temp/
+          tar -xvf YourApp.tar.gz -C /var/www/yourapp
+          sudo systemctl start yourapp.service
+          cd /var/www/temp/
+          rm -rf YourApp.tar.gz
