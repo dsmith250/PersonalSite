@@ -1,0 +1,426 @@
+﻿@model DerekPersonalMVC.Models.ContactViewModel    
+    <!-- Header -->
+    <header id="header" style="margin-top: -25px">
+        <div class="intro text-center">
+            <div class="overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="intro-text">
+                            <h1>Derek <span class="brand">Smith</span></h1>
+                            <p>Full-Stack Web Developer</p>
+                            <a href="#about" class="btn btn-default btn-lg page-scroll">About Me</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- About Section -->
+    <div id="about">
+        <div class="container">
+            <div class="col-md-8 col-md-offset-2 section-title text-center">
+                <h2>About Me</h2>
+                <p><em>"Success is not always about greatness. It's about consistency. Consistent hard work leads to success. Greatness will come." -Dwayne Johnson</em></p>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-6"> <img src="~/Content/img/DerekSmithFirstWeekPhoto2.jpg" class="img-responsive aboutBorder" alt=""> </div>
+                <div class="col-xs-12 col-md-6">
+                    <div class="about-text">
+                        <h2>Who Am I?</h2>
+                        <p>
+                            Hello, my name is Derek Smith and during high schooI I spent 3 years
+                            in the lawn and landscaping industry. While I worked there, I acquired many
+                            useful skills such as  hard work, eye for detail, and having excellent communication
+                            skills while working on a team. However, my true enjoyment and passion for as long as
+                            I can remember was for technology and every aspect of it. During my Senior year
+                            of high school, I was enrolled in the Summit Technology Academy, which is a career
+                            preparation school that I attended for Software Development. Summit Tech motivated
+                            me more to pursue a career in the IT industry, as I figured out that I loved coding.
+                            This led me to now attending Centriq IT Training to hopefully gain a wide variety of
+                            base knowledge for modern websites. With me gaining experience daily, I am determined
+                            to keep expanding my knowledge in the Software industry, and when you have any potential
+                            position openings, I would love to speak with you further about them.
+                        </p>
+                        <br />
+                        <a class="text-center" href="~/Content/Resume/V3Resume.pdf" target="_blank">
+                        <h2 id="myResume">Click here to view my Resume</h2>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <div class="about-text">
+                        <h2 class="text-center" style="margin-top: 1em">My Skills</h2>
+                        <p class="text-center">
+                            It has been a long journey over the past year from me knowing nothing about programming, to where I am now. I am super eager to get more knowledge and more languages in my skillset.
+                            Here are the technologies that I have been working with for about a year now! I can't wait to keep furthering my education and get more skills under my belt! 
+                        </p>
+                        <br />
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-6" style="margin-top: 1em">
+                    <div class="cycle-slideshow aboutBorder">
+                        <img src="~/Content/img/skills/html5.png" class="aboutBorder img-responsive" />
+                        <img src="~/Content/img/skills/css3.png" class="aboutBorder img-responsive" />
+                        <img src="~/Content/img/skills/asp.png" class="aboutBorder img-responsive" /> 
+                        <img src="~/Content/img/skills/javascript.png" class="aboutBorder img-responsive" />
+                        <img src="~/Content/img/skills/mvc.jpg" class="aboutBorder img-responsive" />
+                        <img src="~/Content/img/skills/sqlserver.jpg" class="aboutBorder img-responsive" />
+                        <img src="~/Content/img/skills/java.png" class="aboutBorder img-responsive" />
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio Section -->
+    <div id="portfolio">
+        <div class="container">
+            <div class="col-md-8 col-md-offset-2 section-title text-center">
+                <h2>My Projects</h2>
+                <p>
+                    Here is a gallery of some of the projects I have completed. The gallery consists of websites and console applications, and in the future apps that I have made that will be on the App Store and Google Play Market.                   
+                </p>
+                <br />
+              
+            </div>
+           
+            <div class="categories">
+                <ul class="cat">
+                    <li>
+                        <ol class="type">
+                            <li><a href="#" data-filter="*" class="active">All</a></li>
+                            <li><a href="#" data-filter=".web">Websites</a></li>
+                            <li><a href="#" data-filter=".app">Console-Apps</a></li>
+                            <li><a href="#" data-filter=".branding">Back-End</a></li>
+                        </ol>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="row">
+                <div class="portfolio-items">
+                    <div class="col-sm-6 col-md-3 col-lg-3 web">
+                        <div class="portfolio-item">
+                            <div class="hover-bg">
+                                <a href="http://ustore.derekdev.com/" target="_blank">
+                                @*<img src="~/Content/img/portfolio/01-large.jpg" title="Project description" rel="prettyPhoto">*@
+                                    <div class="hover-text">
+                                        <h4>uStore Project</h4>
+                                        <small>This is one of my first website projects that is data-driven and deployed live. Check it out </small>
+                                    </div>
+                                    <img src="~/Content/img/portfolio/ustoreSmall.jpg" class="img-responsive" alt="Project Title">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3 col-lg-3 web">
+                        <div class="portfolio-item">
+                            <div class="hover-bg">
+                                <a href="http://sat.derekdev.com/" target="_blank">
+                                    <div class="hover-text">
+                                        <h4>SAT Project</h4>
+                                        <small>This is another data-driven web application that is used as a scheduling tool for students and administrators to use to manage enrollments and classes.</small>
+                                    </div>
+                                    <img src="~/Content/img/portfolio/satSmall.png" class="img-responsive" alt="Project Title">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3 col-lg-3 web">
+                        <div class="portfolio-item">
+                            <div class="hover-bg">
+                                <a href="http://fsdp.derekdev.com/" target="_blank">
+                                    <div class="hover-text">
+                                        <h4>Final Project: A-Bidding Reservation</h4>
+                                        <small>This was my final project at Centriq Training. This project is a fully data-driven web application that is a reservation system for customers getting outdoor service bids for their locations! Check it out!</small>
+                                    </div>
+                                    <img src="~/Content/img/portfolio/bidding.JPG"   class="img-responsive" alt="Project Title">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3 col-lg-3 web">
+                        <div class="portfolio-item">
+                            <div class="hover-bg">
+                                <a href="img/portfolio/04-large.jpg" title="Project description" rel="prettyPhoto">
+                                    <div class="hover-text">
+                                        <h4>A Team Lawn</h4>
+                                        <small>Web Design</small>
+                                    </div>
+                                    <img src="~/Content/img/portfolio/comingSoonSmall.png" class="img-responsive" alt="Project Title">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3 col-lg-3 web">
+                        <div class="portfolio-item">
+                            <div class="hover-bg">
+                                <a href="img/portfolio/05-large.jpg" title="Project description" rel="prettyPhoto">
+                                    <div class="hover-text">
+                                        <h4>Pleasant Hill Nutrition</h4>
+                                        <small>App Development</small>
+                                    </div>
+                                    <img src="~/Content/img/portfolio/comingSoonSmall.png" class="img-responsive" alt="Project Title">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3 col-lg-3 web">
+                        <div class="portfolio-item">
+                            <div class="hover-bg">
+                                <a href="img/portfolio/06-large.jpg" title="Project description" rel="prettyPhoto">
+                                    <div class="hover-text">
+                                        <h4>The Rock Shop</h4>
+                                        <small>Branding</small>
+                                    </div>
+                                    <img src="~/Content/img/portfolio/comingSoonSmall.png" class="img-responsive" alt="Project Title">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3 col-lg-3 app">
+                        <div class="portfolio-item">
+                            <div class="hover-bg">
+                                <a href="~/Content/img/portfolio/dunegeon.mp4" target="_blank">
+                                    <div class="hover-text">
+                                        <h4>Dunegeon App</h4>
+                                        <small>This is one of my first games built with C#. Your player is fighting for their life and incrementally put into room with zombies. There are four levels. Click to see more!</small>
+                                    </div>
+                                    <img src="~/Content/img/portfolio/dunegeonAPP.JPG" class="img-responsive" alt="Project Title">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3 col-lg-3 app">
+                        <div class="portfolio-item">
+                            <div class="hover-bg">
+                                <a href="~/Content/img/portfolio/atm.mp4" target="_blank">
+                                    <div class="hover-text">
+                                        <h4>ATM App</h4>
+                                        <small>The ATM application I made using C#, is a simple real world ATM application. Users can select whether they want to withdraw or deposit, and the app stores the amount. Click to see the video</small>
+                                    </div>
+                                    <img src="~/Content/img/portfolio/atmApp.JPG" class="img-responsive" alt="Project Title">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3 col-lg-3 app">
+                        <div class="portfolio-item">
+                            <div class="hover-bg">
+                                <a href="~/Content/img/portfolio/ajava.mp4"  target="_blank">
+                                    <div class="hover-text">
+                                        <h4>A Team Java</h4>
+                                        <small>This my first of many Java Applications. This is a simple app calculating the profits for one day on the job at a lawn and landscaping company.</small>
+                                    </div>
+                                    <img src="~/Content/img/portfolio/ajava.JPG" class="img-responsive" alt="Project Title">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3 col-lg-3 app">
+                        <div class="portfolio-item">
+                            <div class="hover-bg">
+                                <a href="~/Content/img/portfolio/typingtutor.mp4" target="_blank">
+                                    <div class="hover-text">
+                                        <h4>Typing Tutor</h4>
+                                        <small>This is another Java Application I built for people learning to type. It highlights whatever key their on in red, with a simple textbox for them to take notes. I hope to make this a game in the future. </small>
+                                    </div>
+                                    <img src="~/Content/img/portfolio/typingtutor.JPG" class="img-responsive" alt="Project Title">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+        </div>
+    </div>
+    <!-- Team Section -->
+    <div id="team" class="text-center">
+        <div class="container">
+            <div class="col-md-8 col-md-offset-2 section-title">
+                <h2>Other Great Developers</h2>
+                <p>
+                    Below are my classmates that I got privileged to work with over the past
+                    few months. Make sure to check these talented developers out as well!
+                </p>
+            </div>
+            <div id="row">
+                <div class="col-md-3 col-sm-6 team">
+                    <div class="thumbnail">
+                        <a href="http://hardencoding.com/" target="_blank"><img src="~/Content/img/grant.jpg" alt="..." class="img-circle team-img"></a>
+                        <div class="caption">
+                            <h3><a href="http://hardencoding.com/" target="_blank">Grant Harden</a></h3>
+                            <a href="https://www.linkedin.com/in/grant-harden-1a329016b/Links to an external site." target="_blank"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 team">
+                    <div class="thumbnail">
+                        <a href="http://kjcoding.com/" target="_blank">
+                            <img src="~/Content/img/kyle.jpg" alt="..." class="img-circle team-img">
+                        </a>                        
+                        <div class="caption">
+                            <h3><a href="http://kjcoding.com/" target="_blank">Kyle Jackson</a></h3>
+                            <a href="https://www.linkedin.com/in/kyle-jackson5953/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 team">
+                    <div class="thumbnail">
+                        <a href="http://kuhlaid.com/" target="_blank">
+                            <img src="~/Content/img/brent.jpg" alt="..." class="img-circle team-img">
+                        </a>                       
+                         <div class="caption">
+                            <h3><a href="http://kuhlaid.com/" target="_blank">Brent Kuhlman</a></h3>
+                            <a href="https://www.linkedin.com/in/bkuhlman/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 team">
+                    <div class="thumbnail">
+                        <a href="http://lacoding.net/" target="_blank"><img src="~/Content/img/logan.jpg" alt="..." class="img-circle team-img"></a>
+                        <div class="caption">
+                            <h3><a href="http://lacoding.net/" target="_blank">Logan Arnold</a></h3>
+                            <a href="https://www.linkedin.com/in/logan-arnhold-22829116b/Links to an external site." target="_blank"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 team">
+                    <div class="thumbnail">
+                        <a href="http://jhaynesdev.com/" target="_blank"><img src="~/Content/img/jason.jpg" alt="..." class="img-circle team-img"></a>
+                        <div class="caption">
+                            <h3><a href="http://jhaynesdev.com/" target="_blank">Jason Haynes</a></h3>
+                            <a href="https://www.linkedin.com/in/jasonhaynes247/Links to an external site." target="_blank"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 team">
+                    <div class="thumbnail">
+                        <a href="http://almondcode.net/" target="_blank"><img src="~/Content/img/tyler.jpg" alt="..." class="img-circle team-img"></a>
+                        <div class="caption">
+                            <h3><a href="http://almondcode.net/" target="_blank">Tyler Allmon</a></h3>
+                            <a href="https://www.linkedin.com/in/tylerallmon/Links to an external site." target="_blank"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 team">
+                    <div class="thumbnail">
+                        <a href="http://DevelopedJustinTime.com/" target="_blank"><img src="~/Content/img/justin.jpg" alt="..." class="img-circle team-img"></a>
+                        <div class="caption">
+                            <h3><a href="http://DevelopedJustinTime.com/" target="_blank">Justin Luttman</a></h3>
+                            <a href="https://www.linkedin.com/in/justin-luttman-71529016b/Links to an external site." target="_blank"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 team">
+                    <div class="thumbnail">
+                        <a href="http://kellercode.net/" target="_blank"><img src="~/Content/img/kaylynn.jpg" alt="..." class="img-circle team-img"></a>
+                        <div class="caption">
+                            <h3><a href="http://kellercode.net/" target="_blank">Kaylynn Keller</a></h3>
+                            <a href="https://www.linkedin.com/in/kaylynnkeller/Links to an external site." target="_blank"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 team">
+                    <div class="thumbnail">
+                        <a href="dougmck.com/" target="_blank"> <img src="~/Content/img/doug.jpg" alt="..." class="img-circle team-img"></a>
+                        <div class="caption">
+                            <h3><a href="dougmck.com/" target="_blank">Doug Mckinney</a></h3>
+                            <a href="https://www.linkedin.com/in/doug-mckinney-71629016b/Links to an external site." target="_blank"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 team">
+                    <div class="thumbnail">
+                        <a href="http://mdanieldev.com/" target="_blank"><img src="~/Content/img/Micah.jpg" class="img-circle team-img"></a>
+                        <div class="caption">
+                            <h3><a href="http://mdanieldev.com/" target="_blank">Micah Daniel</a></h3>
+                            <a href="https://www.linkedin.com/in/micah-daniel-19a29016b/Links to an external site." target="_blank"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 team">
+                    <div class="thumbnail">
+                        <a href="http://erdev.com/" target="_blank"><img src="~/Content/img/elliot.jpg" alt="..." class="img-circle team-img"></a>
+                        <div class="caption">
+                            <h3><a href="http://erdev.com/" target="_blank">Elliot Rooy</a></h3>
+                            <a href="https://www.linkedin.com/in/elliot-rooy-76189776/Links to an external site." target="_blank"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 team">
+                    <div class="thumbnail">
+                        <a href="http://DanaMPollard.com/" target="_blank"><img src="~/Content/img/dana.jpg" alt="..." class="img-circle team-img"></a>
+                        <div class="caption">
+                            <h3><a href="http://DanaMPollard.com/" target="_blank">Dana Pollard</a></h3>
+                            <a href="https://www.linkedin.com/in/dana-pollard-23429116b/Links to an external site." target="_blank"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact Section -->
+    <div id="contact" class="text-center">
+        <div class="overlay">
+            <div class="container">
+                <div class="col-md-8 col-md-offset-2 section-title">
+                    <h2>Send Me A Message</h2>
+                    <p>
+                        These messages are sent straight to my
+                        email that I check daily!
+                    </p>
+                </div>
+                <div class="col-md-8 col-md-offset-2">
+                    @*<form name="sentMessage" id="contactForm"  class="contact-form row" novalidate>*@
+                        @using (Html.BeginForm("Contact", "Home", FormMethod.Post, new { @class = "contact-form row", id = "contactForm" }))
+                        {
+                            @Html.AntiForgeryToken()
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" id="name" class="form-control" name="Name" placeholder="Name" required="required">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="email" id="email" class="form-control" name="Email" placeholder="Email" required="required">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" id="message" class="form-control" rows="4" placeholder="Message" required="required"></textarea>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div id="success"></div>
+                        <button type="submit" class="btn btn-default">Send Message</button>
+                    @*</form>*@
+                        }
+
+                    <div class="text-center">
+                        @if (ViewBag.Message != null)
+                        { 
+                            @*<a href="@Url.Action("Index", "Home")#contact"></a>*@
+                            <h2>@ViewBag.Message</h2> 
+                           
+                        }
+                    </div>
+                    <div class="social">
+                        <h2>Stay Connected</h2>
+                        <ul>
+                            <li><a href="https://github.com/dsmith250" target="_blank"><i class="fa fa-github"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/derek-smith-dev/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="https://www.instagram.com/derekmatthewsmith/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
