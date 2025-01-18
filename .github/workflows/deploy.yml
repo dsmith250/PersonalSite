@@ -22,13 +22,13 @@ jobs:
       run: msbuild DerekPersonalMVC.sln /p:Configuration=Release
 
     - name: Archive build artifacts
-      run: tar -czvf YourApp.tar.gz -C path\to\Release\Directory\ .
+      run: tar -czvf DerekPersonalMVC.tar.gz -C path\to\Release\Directory\ .
 
     - name: Upload artifacts
       uses: actions/upload-artifact@v3
       with:
         name: package
-        path: YourApp.tar.gz
+        path: DerekPersonalMVC.tar.gz
 
   deploy:
     name: Deploy
@@ -55,7 +55,7 @@ jobs:
         host: 159.203.174.5
         username: root
         key: ${{secrets.KEY}}
-        source: YourApp.tar.gz
+        source: DerekPersonalMVC.tar.gz
         target: /var/www/temp/
 
     - name: Deploy application
@@ -69,7 +69,7 @@ jobs:
           cd /var/www/
           mkdir -p yourapp
           cd /var/www/temp/
-          tar -xvf YourApp.tar.gz -C /var/www/yourapp
+          tar -xvf DerekPersonalMVC.tar.gz -C /var/www/yourapp
           sudo systemctl start yourapp.service
           cd /var/www/temp/
-          rm -rf YourApp.tar.gz
+          rm -rf DerekPersonalMVC.tar.gz
