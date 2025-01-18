@@ -21,8 +21,11 @@ jobs:
     - name: Build
       run: msbuild DerekPersonalMVC.sln /p:Configuration=Release
 
-    - name: Archive build artifacts
-      run: tar -czvf DerekPersonalMVC.tar.gz -C DerekPersonalMVC\bin\Release\ .
+    #- name: Archive build artifacts
+    - name: List files
+      run: dir /s
+
+      #run: tar -czvf DerekPersonalMVC.tar.gz -C DerekPersonalMVC\bin\Release\ .
 
     - name: Upload artifacts
       uses: actions/upload-artifact@v3
