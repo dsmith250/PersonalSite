@@ -23,7 +23,7 @@ jobs:
 
     #- name: Archive build artifacts
     - name: List files
-      run: dir /s
+      run: dir
 
       #run: tar -czvf DerekPersonalMVC.tar.gz -C DerekPersonalMVC\bin\Release\ .
 
